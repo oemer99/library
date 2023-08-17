@@ -8,11 +8,25 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    max-width: 100vw;
+    overflow-x: hidden;                       /* damit ich nicht nach rechts scrollen kann*/   
+}
+
 nav {
     height: 80px;
     display: flex;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    max-height: 50vh;
+}
+
+p {
+    line-height: 1.5;
+}
 
 .nav__container {
     width: 100%;
@@ -22,6 +36,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+}
+
+.purple{
+    color: #7342d6;
 }
 
 .logo{
@@ -64,4 +82,199 @@ li{
 
 header{
     height: calc(100vh - 80px);
+}
+
+.header__container{
+    padding-top: 32px;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-style: 56px;
+    color: #7342d6;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-style: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:active{                      /* :active = draufklicken*/
+    transform: translateY(2px);
+}
+
+.btn{
+    background-color: #7342d6;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none
+}
+
+.header__img--wrapper{
+    padding: 20px;
+    z-index: 2;
+}
+
+.header__img--edit{
+    padding-bottom: 40px;
+}
+
+.container {
+    padding: 56px 0;
+}
+
+.row{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*
+
+HIGHLIGHTS
+
+*/
+
+#highlights{
+    position: relative;
+    max-width: 100vw;
+}
+
+#highlights:before, #highlights:after{       /*:after heißt: Alles NACH "highlights" soll passieren :before heißt: Alles VOR "highlights" soll passieren*/ 
+    background: url('assets/wave.svg');
+    content: "";                             /* bei before: oder after: muss imer ein content dazustehen (meistens leerer inhalt)*/
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#highlights:before {                          
+    transform: translateY(-100%);
+    top: 1px;
+}
+
+#highlights:after{                               
+    transform: translateY(100%) rotate(180deg);     /* rotate 180deg, damit sich das Bild um 180grad dreht*/
+    bottom: 1px;
+}
+  
+
+.highlight__wrapper{
+    display: flex;
+}
+
+.highlight{
+    padding: 0 24px;
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.highlight__para {
+    max-width: 280px
+}
+
+
+.highlight__subtitle{
+    font-size: 20px;
+    margin: 16px;
+}
+
+.highlight__img{
+    border: 2px solid #7342d6;
+    color: #7342d6;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+/* 
+
+FEATURES
+
+*/
+
+#features{
+    padding-top: 8vw;
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+.books{
+    display: flex;
+}
+
+.book{
+    width: 25%;
+    padding: 24px;
+}
+
+.book__img {
+    max-height: 380px;
+    transition: all 300ms ease;
+    cursor: not-allowed;
+
+}
+
+.book__img--wrapper{
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;                  /* in diesem kontext: damit es innerhalb im rahmen zoomt, nicht den rahmen selbst vergrößert*/
+}   
+
+.book__img:hover {             /*when i hover this img i want to scale it*/
+    transform: scale(1.03);
+}
+
+.book__title{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings{
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal{
+    text-decoration: line-through;
+    padding-right: 6px;
+    color: #bfbfbf;
 }
