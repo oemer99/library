@@ -1,183 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="style_library.css">
-    <script src ="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style_library.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
     <section id="landing">
-        <nav>
-            <div class="nav__container">
-            <img src="./assets/Library.svg" alt="" class="logo">
-            <ul class="nav__links">
-                <li> <a href="#" class="nav__link">Home</a></li>
-                <li> <a href="#contact" class="nav__link">Contact</a></li>
-                <li> <a href="#books" class="nav__link nav__link--primary">Books</a></li>
+      <nav>
+        <div class="nav__container">
+          <img src="./assets/Library.svg" alt="" class="logo" />
+          <ul class="nav__links">
+            <li><a href="https://oemer99.github.io/E-Portfolio/" class="nav__link" target="_blank">E-Portfolio</a></li>
+            <li><a href="mailto:oemeray99@outlook.de" class="nav__link">Contact</a></li>
+            <li>
+              <a href="#features" class="nav__link nav__link--primary">Books</a>
+            </li>
+          </ul>
+        <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+                <li class="menu__list">
+                    <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
+                </li>
+                <li class="menu__list">
+                    <a href="mailto:oemeray99@outlook.de" class="menu__link" onclick="closeMenu()">Contacts</a>
+                </li>
+                <li class="menu__list">
+                    <a href="https://oemer99.github.io/E-Portfolio/" class="menu__link" onclick="closeMenu()" target="_blank">E-Portfolio</a>
+                </li>
             </ul>
         </div>
-        </nav>
-        <header>
-            <div class="header__container">
-                <div class="header__description">
-                    <h1>Germany's most awared online library platform</h1>
-                    <h2>Find your dream book with <span class="purple"> Library</span></h2>
-                    <button class="btn">Browse Books</button>
-                </div>
-                <figure class="header__img--wrapper">
-                    <img src="./assets/Undraw_Books.svg" alt="" class="header__img--edit">
-                </figure>
-            </div>
-        </header>
+        </div>
+    </nav>
+      <header>
+        <div class="header__container">
+          <div class="header__description">
+            <h1>Germany's most awared online library platform</h1>
+            <h2>
+              Find your dream book with <span class="purple"> Library</span>
+            </h2>
+            <a href="#features" class="btn__primary"><button class="btn">Browse Books</button></a>
+          </div>
+          <figure class="header__img--wrapper">
+            <img
+              src="./assets/Undraw_Books.svg"
+              alt=""
+              class="header__img--edit"
+            />
+          </figure>
+        </div>
+      </header>
     </section>
 
     <main>
-        <section id="highlights">
-            <div class="container">
-                <div class="row">
-                <h2 class="section__title">
-                    Why choose <span class="purple">Library</span>
-                </h2>
-                <div class="highlight__wrapper">
-                    <div class="highlight">
-                        <div class="highlight__img">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                            <h3 class="highlight__subtitle">
-                                Easy and Quick
-                            </h3>
-                            <p class="highlight__para">
-                                Get access to book you purchased online instantly
-                            </p>
-                    </div>
-                    <div class="highlight">
-                        <div class="highlight__img">
-                            <i class="fas fa-bolt"></i>
-                        </div>
+      <section id="highlights">
+        <div class="container">
+          <div class="row">
+            <h2 class="section__title">
+              Why choose <span class="purple">Library</span>
+            </h2>
+            <div class="highlight__wrapper">
+              <div class="highlight">
+                <div class="highlight__img">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="highlight__subtitle">Easy and Quick</h3>
+                <p class="highlight__para">
+                  Get access to book you purchased online instantly
+                </p>
+              </div>
+              <div class="highlight">
+                <div class="highlight__img">
+                  <i class="fas fa-bolt"></i>
+                </div>
 
-                            <h3 class="highlight__subtitle">
-                                10.000+ Books
-                            </h3>
-                            <p class="highlight__para">
-                                Kibrary has books in all your favourite categories
-                            </p>
-                    </div>
-                    <div class="highlight">
-                        <div class="highlight__img">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                            <h3 class="highlight__subtitle">
-                                Affordable
-                            </h3>
-                            <p class="highlight__para">
-                                Get your hands on popular books for as little as 10€
-                            </p>
-                    </div>
+                <h3 class="highlight__subtitle">10.000+ Books</h3>
+                <p class="highlight__para">
+                  Library has books in all your favourite categories
+                </p>
+              </div>
+              <div class="highlight">
+                <div class="highlight__img">
+                  <i class="fas fa-bolt"></i>
                 </div>
-                </div>
+                <h3 class="highlight__subtitle">Affordable</h3>
+                <p class="highlight__para">
+                  Get your hands on popular books for as little as 10€
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="features">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section__title">
-                        Featured <span class="purple">Books</span>
-                    </h2>
-                    <div class="books">
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/Deep Work_.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Deep Work
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">59.99€</span> 14.99€
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/A Thousand Splendid Suns.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                A Thousand Splendid Suns
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">59.99€</span> 14.99€
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/atomic habits.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Atomic Habits
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">59.99€</span> 14.99€
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/the-art-of-loving.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                               The Art of Loving
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">59.99€</span> 14.99€
-                            </div>
-                        </div>
-                    </div>
+      <section id="features">
+        <div class="container">
+          <div class="row">
+            <h2 class="section__title">
+              Featured <span class="purple">Books</span>
+            </h2>
+            <div class="books">
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/Deep Work_.jpg" alt="" />
+                </figure>
+                <div class="book__title">Deep Work</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
                 </div>
-            </div>
-        </section>
-
-
-        <!-- Min 50:00!!!!!!!! -->
-
-        <!--
-
-             <section id="recent">
-            <div class="container">
-                <div class="row">
-
+                <div class="book__price">
+                  <span class="book__price--normal">59.99€</span> 14.99€
                 </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/A Thousand Splendid Suns.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">A Thousand Splendid Suns</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">59.99€</span> 14.99€
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/atomic habits.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">Atomic Habits</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">59.99€</span> 14.99€
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/the-art-of-loving.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">The Art of Loving</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">59.99€</span> 14.99€
+                </div>
+              </div>
             </div>
-        </section> -->
+          </div>
+        </div>
+      </section>
 
+      <section id="recent">
+        <div class="container row-rapper">
+          <div class="row">
+            <h2 class="section__title">
+              Recent <span class="purple">Books</span>
+            </h2>
+            <div class="books books--wrapper">
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/51oDSNyJLDL.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">
+                  JavaScript from Beginner to Professional
+                </div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/book-3.jpeg" alt="" />
+                </figure>
+                <div class="book__title">Rich Dad Poor Dad</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/book-5.jpeg" alt="" />
+                </figure>
+                <div class="book__title">48 Laws of Power</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/CSS for Dummies_.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">CSS Web Design for Dummies</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/React_.jpg" alt="" />
+                </figure>
+                <div class="book__title">
+                  Step-by-Step Guide to Learning React
+                </div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/book-6.jpeg" alt="" />
+                </figure>
+                <div class="book__title">The 5 Second Rule</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/der-prophet-9783257239607.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">The Prophet</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/book-1.jpeg" alt="" />
+                </figure>
+                <div class="book__title">The 10X Rule</div>
+                <div class="book__ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">59.99€</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="explore">
+        <div class="container">
+          <div class="row">
+            <h2 class="section__title">
+              Explore more <span class="purple">Books</span>
+            </h2>
+            <a href="#features" class="btn__primary">
+          <button class="btn btn__explore">Browse Books</button>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-</body>
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <a href="#">
+            <figure class="footer__logo">
+              <img src="./assets/Library.svg" alt="" class="footer__logo--img" />
+            </figure>
+          </a>
+          <div class="footer__list">
+            <a href="#recent" class="footer__link">Books</a
+            ><a href="mailto:oemeray99@outlook.de" class="footer__link">Contact</a
+            ><a href="https://oemer99.github.io/E-Portfolio/" class="footer__link" target="_blank">E-Portfolio</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2023 Library</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
